@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-  <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    body {font-family: Arial;}
-    
-    /* Style the tab */
+<html>
+<head>
+  <title>Manav's Website!</title>
+  <style>
+    .headshot {
+      margin-top: 80px;
+      margin-left: -110px;
+      width: 400px;
+      border-radius: 50%;
+    }
+    body {
+      font-family: Arial;
+      background-color: paleturquoise;
+    }
     .tab {
       overflow: hidden;
       border: 1px solid #ccc;
       background-color: #f1f1f1;
     }
-    
-    /* Style the buttons inside the tab */
     .tab button {
       background-color: inherit;
       float: left;
@@ -23,108 +28,121 @@
       transition: 0.3s;
       font-size: 17px;
     }
-    
-    /* Change background color of buttons on hover */
     .tab button:hover {
       background-color: #ddd;
     }
-    
-    /* Create an active/current tablink class */
     .tab button.active {
       background-color: #ccc;
     }
-    
-    /* Style the tab content */
     .tabcontent {
       display: none;
       padding: 6px 12px;
       border: 1px solid #ccc;
       border-top: none;
     }
-      </style>
-    </head>
+    .content {
+      margin-top: -460px;
+      margin-left: 510px;
+      max-width: 600px;
+      font-size: 20px;
+    }
 
+    .email {
+      margin-left: 150px;
+    }
+  </style>
+</head>
 
-  <body>
+<body>
+  <div class="tab">
+    <button class="tablinks" onclick="goToPage(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openCity(event, 'LinkedIn')">LinkedIn</button>
+    <button class="tablinks" onclick="openCity(event, 'Parks Youth Committee')">Parks Youth Committee</button>
+    <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
+    <button class="tablinks" onclick="openCity(event, 'Resume')">Resume</button>
+    <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
+  </div>
+
+  <div id="Parks Youth Committee" class="tabcontent">
+    <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6">
+      <h3>Parks Youth Committee</h3>
+    </a>
+    <p>A committee I was part of with the goal of increasing park equity in Modesto.</p>
+  </div>
+
+  <div id="Home" class="tabcontent">
+    <a href="Manav Website.html">
+      <h3>Home</h3>
+    </a>
+  </div>
+
+  <div id="LinkedIn" class="tabcontent">
+    <a href="https://www.linkedin.com/in/manav-kumar-a0299b243/">
+      <h3>LinkedIn</h3>
+    </a>
+    <p>Connect with me on LinkedIn!</p>
+  </div>
+
+  <div id="Research" class="tabcontent">
+    <a href="https://research-archive.org/index.php/rars/preprint/view/45">
+      <h3>Modesto Statistical Analysis</h3>
+    </a>
+    <p>A mentored research paper I completed about the socioeconomic factors of Modesto that impact park quality.</p>
+  </div>
+
+  <div id="Resume" class="tabcontent">
+    <a href="resume.html">
+      <h3>Resume</h3>
+    </a>
+    <p>Here is my Resume!</p>
+  </div>
+
+  <div id="Portfolio" class="tabcontent">
+    <a href="DSS Project.html">
+      <h3>AirBnb Project</h3>
+    </a>
+  </div>
+
+  <div class = "email">
+  <img src="images/Manav Headshot.jpg" alt="Headshot of Manav Kumar" class="headshot"/>
+  <a href="mailto:manavkk05@gmail.com">
+    <p>manavkk05@gmail.com</p>
+  </div>
     
-    <div class="tab">
-      <a href="https://www.linkedin.com/in/manav-kumar-a0299b243/">
-         <button> 
-          LinkedIn 
-         </button> 
-      </a>
-      
-        <button
-          class="tablinks" onclick="openCity(event, 'Parks Youth Committee')">Parks Youth Committee</button>
-        </button>
-      <button class="tablinks" onclick="openCity(event, 'Research')">Reseach</button>
-      </button> 
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-    </div>
-    
-    <div id="Parks Youth Committee" class="tabcontent">
-      <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6"> <h3> Parks Youth Committee </h3> </a>
-          <p> A committee I was part with the goal of increasing park equity. </p>
-      
-      
-    </div>
-    
-    <div id="Research" class="tabcontent">
-      
-      <a href="https://research-archive.org/index.php/rars/preprint/view/45"> <h3>Modesto Statistical Analysis</h3> </a>
-      <p>A mentored research paper I completed about the socioeconomic factors of Modesto that impact park quality. </p> 
-    </div>
-    
-    <div id="Tokyo" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
-    </div>
-    
-    <script>
+  </a>
+
+  <div class="content">
+    <p>Hi there! I'm Manav, a passionate student at UC Berkeley majoring in Statistics with a minor in Data Science. Currently, I'm interning at Gallo Winery every summer with a rotation position, my most recent being researching how to leverage Amazon SageMaker for company data.</p>
+    <p>Beyond academics, I am a dedicated community service advocate, committed to making a positive impact in the lives of others. I believe in the power of data to drive positive change, and I am eager to explore opportunities that align with my passion for community service and data science.</p>
+    <p>Additionally, I have a deep appreciation of the little things in life. Spending time outdoors whether it's going on a hike or gardening. Outside of academia and work, I am an avid gym enthusiast. I like to track my progress in the gym from calorie intake to the number of reps completed.</p>
+    <p>I stay informed and inspired through podcasts, with Lex Fridman being a notable favorite. Additionally, my interests span across music and TV analysis, sports, and random science-related videos.</p>
+  </div>
+
+  <script>
     function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+        if (tabcontent[i].id === cityName) {
+          if (tabcontent[i].style.display === "block") {
+            tabcontent[i].style.display = "none";
+          } else {
+            tabcontent[i].style.display = "block";
+          }
+        } else {
+          tabcontent[i].style.display = "none";
+        }
       }
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
-      document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active";
     }
-    </script>
-       
-    </body>
 
-
-
-  </head>
-  <head>
-    <title>
-      Manav's Website!
-    </title>
-    <style>
-      img {
-        width: 200px;
-        border-radius: 50px;
-        float: left;
-        margin-right: 10px;
-        margin-top: 22px;
-      }
-    </style>
-  <body>
-    <img src="images/Manav Headshot.jpg" alt="A headshot of Manav Kumar"/>
-    <body style="background-color: paleturquoise;">
-  
-    <div style="margin-top: 20px"> Hi there! I'm Manav, a passionate student at UC Berkeley majoring in Statistics with a minor in Data Science. Currently, I'm interning at Gallo Winery every summer with a rotation position, my most recent being researching how to leverage Amazon SageMaker for company data. </div>
-    <div style="margin-top: 20px"> Beyond academics, I am a dedicated community service advocate, committed to making a positive impact in the lives of others. I believe in the power of data to drive positive change, and I am eager to explore opportunities that align with my passion for community service and data science.  </div>
-    <div style="margin-top: 20px"> Outside of academia and work, I am an avid gym enthusiast, finding balance and inspiration through physical fitness. My hobbies also include nurturing my green thumb through gardening and exploring the depths of philosophical literature. </div>
-    <div style="margin-top: 20px"> I stay informed and inspired through podcasts, with Lex Fridman being a notable favorite. Additionally, my interests span across music analysis, football, and the intricacies of fitness tracking. </div>
-  </body> 
-</head>
-  
-
-
+    function goToPage(pageUrl) { 
+      window.location.href = "Manav Website.html"; 
+    }
+  </script>
+</body>
 </html>
