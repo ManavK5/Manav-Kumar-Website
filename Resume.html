@@ -70,7 +70,7 @@
 <body>
   <!-- Navigation Tabs -->
   <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="goToPage(event, 'Home')">Home</button>
     <button class="tablinks" onclick="openCity(event, 'LinkedIn')">LinkedIn</button>
     <button class="tablinks" onclick="openCity(event, 'Parks Youth Committee')">Parks Youth Committee</button>
     <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
@@ -78,11 +78,7 @@
     <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
   </div>
 
-  <!-- Tab Content -->
-  <div id="Home" class="tabcontent">
-    <h3>Welcome to My Website!</h3>
-    <p>This is the home page content.</p>
-  </div>
+  
 
   <div id="Parks Youth Committee" class="tabcontent">
     <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6">
@@ -106,7 +102,7 @@
   </div>
 
   <!-- Resume Section -->
-  <div id="Resume" class="tabcontent">
+  <div id="Resume" class="resume-container">
     <h3>My Resume</h3>
     <div class="resume-container">
       <object data="Manav Kumar - Resume.pdf" type="application/pdf">
@@ -135,7 +131,13 @@
       }
       evt.currentTarget.className += " active";
     }
+
+    function goToPage() {
+      window.location.href = "index.html";
+    }
   </script>
+
+
 
 </body>
 </html>
