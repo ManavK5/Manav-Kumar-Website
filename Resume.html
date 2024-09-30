@@ -49,45 +49,8 @@
       font-size: 16px;
     }
 
-    .content {
-      margin: 40px auto;
-      max-width: 800px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .email {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 18px;
-    }
-
-    .email a {
-      color: #007BFF;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .email a:hover {
-      color: #0056b3;
-    }
-
-    h3 {
-      font-weight: 500;
-    }
-
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Style for the embedded resume */
     .resume-container {
-      display: none;
+      display: none; /* Initially hidden */
       padding: 20px;
       margin: 20px auto;
       max-width: 800px;
@@ -107,7 +70,7 @@
 <body>
   <!-- Navigation Tabs -->
   <div class="tab">
-    <button class="tablinks" onclick="goToPage(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
     <button class="tablinks" onclick="openCity(event, 'LinkedIn')">LinkedIn</button>
     <button class="tablinks" onclick="openCity(event, 'Parks Youth Committee')">Parks Youth Committee</button>
     <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
@@ -116,6 +79,11 @@
   </div>
 
   <!-- Tab Content -->
+  <div id="Home" class="tabcontent">
+    <h3>Welcome to My Website!</h3>
+    <p>This is the home page content.</p>
+  </div>
+
   <div id="Parks Youth Committee" class="tabcontent">
     <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6">
       <h3>Parks Youth Committee</h3>
@@ -137,35 +105,21 @@
     <p>A mentored research paper I completed about the socioeconomic factors of Modesto that impact park quality.</p>
   </div>
 
+  <!-- Resume Section -->
+  <div id="Resume" class="tabcontent">
+    <h3>My Resume</h3>
+    <div class="resume-container">
+      <object data="Manav Kumar - Resume.pdf" type="application/pdf">
+        <p>Your browser does not support embedding PDFs. <a href="Manav Kumar - Resume.pdf">Download the PDF</a>.</p>
+      </object>
+    </div>
+  </div>
+
   <div id="Portfolio" class="tabcontent">
     <a href="DSS Project.html">
       <h3>AirBnb Project</h3>
     </a>
   </div>
-
-
-<head>
-  <head>
-      <title>Manav's Website!</title>
-      <style>
-        /* Center the object element */
-        div.centered {
-          position: absolute;
-          left: 50%;
-          top: 82%;
-          transform: translate(-50%, -50%);
-        }
-      </style>
-    </head>
-    <body>
-      <div class="centered">
-        <object data="Manav Kumar - Resume.pdf" type="application/pdf" width="700px" height="1000px">
-        </object>
-      </div>
-    </body>
-</head>
-
-
 
   <script>
     function openCity(evt, cityName) {
@@ -181,10 +135,7 @@
       }
       evt.currentTarget.className += " active";
     }
-    
-    function goToPage(pageUrl) {
-      window.location.href = "index.html";
-    }
   </script>
+
 </body>
 </html>
