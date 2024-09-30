@@ -174,22 +174,14 @@
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-
-      var resumeContent = document.getElementById('Resume');
-      if (cityName === 'Resume') {
-        resumeContent.style.display = "block";
-      } else {
-        resumeContent.style.display = "none";
-        document.getElementById(cityName).style.display = "block";
-      }
-
+      document.getElementById(cityName).style.display = "block";
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
       evt.currentTarget.className += " active";
     }
-
+    
     function goToPage(pageUrl) {
       window.location.href = "index.html";
     }
