@@ -4,67 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manav's Website!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: powderblue;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
+      padding: 0;
+      color: #333;
     }
 
     .tab {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .tab button {
-      background-color: inherit;
-      float: left;
+      background-color: transparent;
       border: none;
-      outline: none;
+      padding: 12px 20px;
+      font-size: 16px;
       cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-      font-size: 17px;
+      transition: all 0.3s ease;
+      color: #333;
     }
 
-    .tab button:hover {
-      background-color: #ddd;
-    }
-
+    .tab button:hover,
     .tab button.active {
-      background-color: #ccc;
+      color: #007BFF;
+      border-bottom: 2px solid #007BFF;
     }
 
     .tabcontent {
       display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-      background-color: #fff;
-    }
-
-    /* Style for the embedded content */
-    .pdf-container {
       padding: 20px;
       margin: 20px auto;
       max-width: 800px;
-      text-align: center;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
+      font-size: 16px;
     }
 
-    .pdf-container object {
-      width: 100%;
-      height: 1000px;
+    .content {
+      margin: 40px auto;
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .headshot {
+      display: block;
+      margin: 40px auto;
+      width: 180px;
+      border-radius: 50%;
+    }
+
+    .email {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .email a {
+      color: #007BFF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .email a:hover {
+      color: #0056b3;
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Navigation Tabs -->
   <div class="tab">
     <button class="tablinks" onclick="goToPage(event, 'Home')">Home</button>
     <button class="tablinks" onclick="openCity(event, 'LinkedIn')">LinkedIn</button>
@@ -74,12 +104,17 @@
     <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
   </div>
 
-  <!-- Tab Content -->
   <div id="Parks Youth Committee" class="tabcontent">
     <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6">
       <h3>Parks Youth Committee</h3>
     </a>
     <p>A committee I was part of with the goal of increasing park equity in Modesto.</p>
+  </div>
+
+  <div id="Home" class="tabcontent">
+    <a href="index.html">
+      <h3>Home</h3>
+    </a>
   </div>
 
   <div id="LinkedIn" class="tabcontent">
@@ -100,7 +135,13 @@
     <a href="Resume.html">
       <h3>Resume</h3>
     </a>
-    <p>Here is my Resume!</p>
+    <p></p>
+  </div>
+
+  <div id="Portfolio" class="tabcontent">
+    <a href="DSS Project.html">
+      <h3>AirBnb Project</h3>
+    </a>
   </div>
 
 
