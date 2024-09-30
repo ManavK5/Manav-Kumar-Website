@@ -103,12 +103,27 @@
     <p>Here is my Resume!</p>
   </div>
 
-  <!-- Portfolio Section with embedded PDF -->
-  <div id="Portfolio" class="pdf-container tabcontent">
-    <object data="DSS Final Project.pdf" type="application/pdf">
-      <p>Your browser does not support embedding PDFs. <a href="DSS Final Project.pdf">Download the PDF</a>.</p>
-    </object>
-  </div>
+</head>
+<head>
+  <head>
+      <title>Manav's Website!</title>
+      <style>
+        /* Center the object element */
+        div.centered {
+          position: absolute;
+          left: 50%;
+          top: 82%;
+          transform: translate(-50%, -50%);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="centered">
+        <object data="DSS Final Project.pdf" type="application/pdf" width="700px" height="1000px">
+        </object>
+      </div>
+    </body>
+</head>
 
   <script>
     function openCity(evt, cityName) {
@@ -126,7 +141,7 @@
     }
 
     function goToPage(pageUrl) {
-      window.location.href = "Manav Website.html";
+      window.location.href = "index.html";
     }
   </script>
 
