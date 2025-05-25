@@ -91,104 +91,88 @@
     a:hover {
       text-decoration: underline;
     }
+
+
+    .centered {
+      text-align: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="tab">
-    <button class="tablinks" onclick="goToPage(event, 'Home')">Home</button>
-    <button class="tablinks" onclick="openCity(event, 'LinkedIn')">LinkedIn</button>
-    <button class="tablinks" onclick="openCity(event, 'Parks Youth Committee')">Parks Youth Committee</button>
-    <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
-    <button class="tablinks" onclick="openCity(event, 'Resume')">Resume</button>
-    <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
+<div class="tab">
+  <button class="tablinks" onclick="goToPage(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'LinkedIn')">LinkedIn</button>
+  <button class="tablinks" onclick="openCity(event, 'Parks Youth Committee')">Parks Youth Committee</button>
+  <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
+  <button class="tablinks" onclick="openCity(event, 'Resume')">Resume</button>
+  <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
+</div>
+
+<div id="Parks Youth Committee" class="tabcontent">
+  <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6">
+    <h3>Parks Youth Committee</h3>
+  </a>
+  <p>A committee I was part of with the goal of increasing park equity in Modesto.</p>
+</div>
+
+<div id="Home" class="tabcontent">
+  <a href="index.html">
+    <h3>Home</h3>
+  </a>
+</div>
+
+<div id="LinkedIn" class="tabcontent">
+  <a href="https://www.linkedin.com/in/manav-kumar-a0299b243/">
+    <h3>LinkedIn</h3>
+  </a>
+  <p>Connect with me on LinkedIn!</p>
+</div>
+
+<div id="Research" class="tabcontent">
+  <a href="https://research-archive.org/index.php/rars/preprint/view/45">
+    <h3>Modesto Statistical Analysis</h3>
+  </a>
+  <p>A mentored research paper I completed about the socioeconomic factors of Modesto that impact park quality.</p>
+</div>
+
+<div id="Resume" class="tabcontent">
+  <div class="centered">
+    <object data="Manav's_Resume_Data_Sci.pdf" type="application/pdf" width="700px" height="1000px">
+      <p>Unable to display PDF file. <a href="Manav's_Resume_Data_Sci.pdf">Download instead</a>.</p>
+    </object>
   </div>
+</div>
 
-  <div id="Parks Youth Committee" class="tabcontent">
-    <a href="https://storymaps.arcgis.com/stories/ee14c231d8094be694a6ac7df14af6b6">
-      <h3>Parks Youth Committee</h3>
-    </a>
-    <p>A committee I was part of with the goal of increasing park equity in Modesto.</p>
-  </div>
+<div id="Portfolio" class="tabcontent">
+  <a href="DSS Project.html">
+    <h3>AirBnb Forest Regressor Project</h3>
+  </a>
+  <a href="Mental Health Classifier.html">
+    <h3>Mental Health Classifier Project</h3>
+  </a>
+</div>
 
-  <div id="Home" class="tabcontent">
-    <a href="index.html">
-      <h3>Home</h3>
-    </a>
-  </div>
-
-  <div id="LinkedIn" class="tabcontent">
-    <a href="https://www.linkedin.com/in/manav-kumar-a0299b243/">
-      <h3>LinkedIn</h3>
-    </a>
-    <p>Connect with me on LinkedIn!</p>
-  </div>
-
-  <div id="Research" class="tabcontent">
-    <a href="https://research-archive.org/index.php/rars/preprint/view/45">
-      <h3>Modesto Statistical Analysis</h3>
-    </a>
-    <p>A mentored research paper I completed about the socioeconomic factors of Modesto that impact park quality.</p>
-  </div>
-
-  <div id="Resume" class="tabcontent">
-    <a href="Resume.html">
-      <h3>Resume</h3>
-    </a>
-    <p></p>
-  </div>
-
-  <div id="Portfolio" class="tabcontent">
-    <a href="DSS Project.html">
-        <h3>AirBnb Forest Regressor Project</h3>  
-    <a href="Mental Health Classifier.html">
-        <h3>Mental Health Classifier Project</h3>
-      </a>
-    </a>
-  </div>
-
-
-<head>
-  <head>
-      <title>Manav's Website!</title>
-      <style>
-        /* Center the object element */
-        div.centered {
-          position: absolute;
-          left: 50%;
-          top: 82%;
-          transform: translate(-50%, -50%);
-          margin-top: 50%;
-        }
-      </style>
-    </head>
-    <body>
-      <div class="centered">
-        <object data="Manav's_Resume_Data_Sci.pdf" type="application/pdf" width="700px" height="1000px">
-        </object>
-      </div>
-    </body>
-</head>
-
-  <script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
     }
-
-    function goToPage(pageUrl) {
-      window.location.href = "index.html";
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-  </script>
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  function goToPage(pageUrl) {
+    window.location.href = "index.html";
+  }
+</script>
 
 </body>
 </html>
